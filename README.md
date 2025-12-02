@@ -12,8 +12,8 @@ PORT:3000
     "username": YOUR_DB_LOGIN_NAME,
     "password": YOURDBPASSWORD,
     "database": "Flights_Serach_DB_DEV",
-    "host": "127.0.0.1",
+    "host": "127.0.0.1", 
     "dialect": "mysql"
   }
 
-  -Once you've added 
+  -Once you've added your db config as listed above , go to the src folder from your terminal and execute npx sequelize db:create
