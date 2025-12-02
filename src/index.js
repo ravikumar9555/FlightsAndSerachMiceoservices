@@ -1,6 +1,7 @@
 const express = require("express");
-const {PORT} = require('./confiq/serverConfiq')
+const {PORT} = require('./config/serverConfiq')
 const bodyparser = require('body-parser')
+const CityRepository = require('./repository/city-repository')
 
 const setupAndStartServer = async () => {
     
@@ -11,6 +12,11 @@ const setupAndStartServer = async () => {
 
     app.listen(PORT , () => {
         console.log(`Server started at ${PORT}`);
+        const repo = new CityRepository();
+        // repo.createCity({
+        //     name : 'New Delhi'
+        // })
+        //repo.deleteCity(1);
      
     })
      
